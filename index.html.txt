@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>現代風格連結頁</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #4A90E2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    a.button:hover {
+      background-color: #357ABD;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>歡迎來到我的現代網頁</h1>
+  <a href="test.html" class="button">前往 Test 頁面</a>
+
+</body>
+</html>
