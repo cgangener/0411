@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg950\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="zh-Hant">\
+<head>\
+  <meta charset="UTF-8">\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <title>\uc0\u31777 \u26131  MBTI \u28204 \u39511 </title>\
+  <style>\
+    body \{\
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;\
+      background-color: #f5f5f5;\
+      padding: 20px;\
+      max-width: 600px;\
+      margin: auto;\
+    \}\
+    h1 \{\
+      text-align: center;\
+      color: #4A90E2;\
+    \}\
+    .question \{\
+      margin-bottom: 20px;\
+    \}\
+    .question p \{\
+      font-weight: bold;\
+    \}\
+    button \{\
+      padding: 10px 20px;\
+      background-color: #4A90E2;\
+      color: white;\
+      border: none;\
+      border-radius: 5px;\
+      cursor: pointer;\
+    \}\
+    button:hover \{\
+      background-color: #357ABD;\
+    \}\
+    .result \{\
+      margin-top: 30px;\
+      font-size: 1.2em;\
+      text-align: center;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <h1>\uc0\u31777 \u26131  MBTI \u28204 \u39511 </h1>\
+  <form id="quizForm">\
+    <div class="question">\
+      <p>1. \uc0\u20320 \u22312 \u31038 \u20132 \u22580 \u21512 \u26356 \u20670 \u21521 \u26044 \u65311 </p>\
+      <label><input type="radio" name="q1" value="E"> \uc0\u36319 \u24456 \u22810 \u20154 \u32842 \u22825 </label><br>\
+      <label><input type="radio" name="q1" value="I"> \uc0\u25214 \u20491 \u35282 \u33853 \u38748 \u38748 \u35264 \u23519 </label>\
+    </div>\
+    <div class="question">\
+      <p>2. \uc0\u20320 \u26356 \u30456 \u20449 \u65311 </p>\
+      <label><input type="radio" name="q2" value="S"> \uc0\u23526 \u38555 \u32147 \u39511 </label><br>\
+      <label><input type="radio" name="q2" value="N"> \uc0\u38728 \u24863 \u33287 \u21487 \u33021 \u24615 </label>\
+    </div>\
+    <div class="question">\
+      <p>3. \uc0\u20570 \u27770 \u23450 \u26178 \u20320 \u26356 \u37325 \u35222 \u65311 </p>\
+      <label><input type="radio" name="q3" value="T"> \uc0\u37007 \u36655 \u33287 \u23458 \u35264 </label><br>\
+      <label><input type="radio" name="q3" value="F"> \uc0\u24863 \u21463 \u33287 \u20729 \u20540 </label>\
+    </div>\
+    <div class="question">\
+      <p>4. \uc0\u20320 \u26356 \u21916 \u27489 \u29983 \u27963 \u65311 </p>\
+      <label><input type="radio" name="q4" value="J"> \uc0\u26377 \u35336 \u21123 \u12289 \u26377 \u32068 \u32340 </label><br>\
+      <label><input type="radio" name="q4" value="P"> \uc0\u38728 \u27963 \u12289 \u21363 \u33288 </label>\
+    </div>\
+    <div style="text-align:center">\
+      <button type="button" onclick="showResult()">\uc0\u26597 \u30475 \u32080 \u26524 </button>\
+    </div>\
+  </form>\
+\
+  <div class="result" id="result"></div>\
+\
+  <script>\
+    function showResult() \{\
+      const form = document.forms['quizForm'];\
+      const traits = ['q1', 'q2', 'q3', 'q4'];\
+      let mbti = '';\
+\
+      for (let trait of traits) \{\
+        const value = form[trait].value;\
+        if (!value) \{\
+          alert('\uc0\u35531 \u23436 \u25104 \u25152 \u26377 \u21839 \u38988 \u65281 ');\
+          return;\
+        \}\
+        mbti += value;\
+      \}\
+\
+      const descriptions = \{\
+        'INTJ': '\uc0\u25136 \u30053 \u23478 \u65306 \u23500 \u26377 \u21109 \u36896 \u21147 \u12289 \u21916 \u27489 \u35215 \u21123 \u33287 \u29544 \u31435 \u24605 \u32771 \u12290 ',\
+        'INFP': '\uc0\u35519 \u20572 \u32773 \u65306 \u29702 \u24819 \u20027 \u32681 \u12289 \u26377 \u21516 \u29702 \u24515 \u20006 \u29105 \u24859 \u24819 \u20687 \u21147 \u12290 ',\
+        'ENTP': '\uc0\u36783 \u35542 \u23478 \u65306 \u21916 \u27489 \u25361 \u25136 \u20659 \u32113 \u12289 \u23500 \u26377 \u21109 \u24847 \u33287 \u27963 \u21147 \u12290 ',\
+        'ISFJ': '\uc0\u23432 \u35703 \u32773 \u65306 \u26377 \u36012 \u20219 \u24863 \u12289 \u37325 \u35222 \u38364 \u20418 \u12289 \u28331 \u26580 \u39636 \u36028 \u12290 ',\
+        // \uc0\u21487 \u20197 \u33258 \u34892 \u35036 \u19978 \u26356 \u22810 \u22411 \u24907 \u25551 \u36848 \
+      \};\
+\
+      const description = descriptions[mbti] || '\uc0\u36889 \u26159 \u20491 \u26377 \u36259 \u30340 \u32068 \u21512 \u65281 \u20320 \u26159  ' + mbti + ' \u22411 \u12290 ';\
+      document.getElementById('result').innerText = description;\
+    \}\
+  </script>\
+</body>\
+</html>\
+}
